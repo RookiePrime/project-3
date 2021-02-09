@@ -8,6 +8,10 @@ class App extends Component {
     data: [5]
   }
 
+  makeCard = () => {
+
+  }
+
   render() {
 
     return (
