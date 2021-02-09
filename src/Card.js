@@ -10,7 +10,7 @@ class Card extends Component {
               
             </div>
             <div className="card-box">
-              <img src="../assets/card coins master.png" />
+              <img src="../assets/evileye.png" />
             </div>
             <div className="card-bottom">
               <div className="card-text-box">
