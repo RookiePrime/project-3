@@ -1,0 +1,49 @@
+.card {
+    background-color: whitesmoke;
+    border-radius: 5%;
+    height: 400px;
+    width: 250px;
+    position: absolute;
+    top: 15%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-top, .card-bottom {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    position: relative;
+  }
+  
+  .card-name {
+    padding-left: 10px;
+    align-self: stretch;
+    border: 2px solid black;
+  }
+  
+  .card-top .suit-colour{
+    right: -5px;
+  
+  }
+  
+  .card-bottom .suit-colour {
+    left: -5px;
+  }
+  
+  .suit-colour {
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  .card-box {
+    background-color: blue;
+    height: 250px;
+    width: 80%;
+  }
