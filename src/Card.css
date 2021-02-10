@@ -3,8 +3,8 @@
     border-radius: 5%;
     height: 400px;
     width: 250px;
-    position: absolute;
-    top: 15%;
+    /* position: absolute; */
+    /* top: 15%; */
     padding: 10px;
     display: flex;
     flex-direction: column;

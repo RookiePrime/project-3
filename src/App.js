@@ -5,14 +5,16 @@ import Card from './Card';
 class App extends Component {
 
   state = {
-    data: [5]
-  }
-
-  makeCard = () => {
-
+    cards: []
   }
 
   render() {
+
+    const children = [];
+
+    for (let i = 0; i < this.state.numCards; i++) {
+      children.push(<Card key={i} />);
+    }
 
     return (
       <div className="App">
@@ -20,11 +22,11 @@ class App extends Component {
           <h1>Tarokka Reading</h1>
         </header>
         <main className="App-main">
-          <button className="make-cards">Make a Card!</button>
-          <Card />
+          <button className="make-cards" onClick={() => children.push(<Card />)}>Make a Card!</button>
+          {children}
         </main>
       </div>
-    )
+    );
   };
 }
 
