@@ -3,8 +3,7 @@
     border-radius: 5%;
     height: 400px;
     width: 250px;
-    /* position: absolute; */
-    /* top: 15%; */
+    margin: 10px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -42,7 +41,7 @@
     z-index: 10;
   }
   
-  .card-box {
+  .pic-box {
     background-color: blue;
     height: 250px;
     width: 80%;
