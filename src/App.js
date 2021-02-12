@@ -15,15 +15,18 @@ class App extends Component {
   //   })
   // }
 
-  state = {
-    numOfCards: 0,
-    cards: []
+  constructer() {
+    this.state = {
+      numOfCards: 0,
+      cards: []
+    }
   }
+
 
   makeCard = () => {
     this.setState({
       numOfCards: this.state.numOfCards + 1,
-      cards: this.state.cards.push(5000)
+      cards: this.state.cards.concat(<Card />)
     })
   }
 
