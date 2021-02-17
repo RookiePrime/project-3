@@ -1,42 +1,40 @@
 import React, {Component} from 'react';
 import './App.css';
 import Card from './Card';
+import './Deck.json';
 
 class App extends Component {
 
-  // state = {
-  //   cards: 0
-  // }
+  state = {
+    numOfCards: 0,
+    cards: [],
+    deck: []
+  };
 
-  // makeCard = () => {
-  //   console.log('beep')
-  //   this.setState({
-  //     cards: this.state.cards + 1
-  //   })
-  // }
+  componentDidMount() {
 
-  constructer() {
-    this.state = {
-      numOfCards: 0,
-      cards: []
-    }
+    fetch(`./Deck.json`).then( data => data.json() )
+      .then( data => {
+        this.setState({
+          deck: data
+        });
+      }).catch( data => {
+        console.log(`Poopy: ${data}`)
+      });
   }
-
 
   makeCard = () => {
     this.setState({
       numOfCards: this.state.numOfCards + 1,
-      cards: this.state.cards.concat(<Card />)
-    })
+      cards: this.state.cards.concat(this.state.deck[Math.floor(Math.random() * this.state.deck.length)])
+    });
   }
 
   render() {
 
-    const children = [];
-
-    for (let i = 0; i < this.state.cards; i++) {
-      children.push(<Card key={i} />);
-    }
+    const theCards = this.state.cards.map( (card, i) => {
+      return <Card key={i} />
+    });
 
     return (
       <div className="App">
@@ -44,9 +42,9 @@ class App extends Component {
           <h1>Tarokka Reading</h1>
         </header>
         <main className="App-main">
-          <button className="make-cards" onClick={() => this.makeCard()}>Make a Card!</button>
+          <button className="make-cards" onClick={() => this.makeCard(this.state.deck)}>Make a Card!</button>
           <div className="cards-box">
-            {this.state.cards}  
+            {theCards}  
           </div>
         </main>
       </div>
