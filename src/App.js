@@ -1,39 +1,39 @@
 import React, {Component} from 'react';
 import './App.css';
 import Card from './Card';
-import './Deck.json';
+import deckData from './Deck.json';
 
 class App extends Component {
 
   state = {
     numOfCards: 0,
-    cards: [],
-    deck: []
+    cards: []
   };
 
   componentDidMount() {
 
-    fetch(`./Deck.json`).then( data => data.json() )
-      .then( data => {
-        this.setState({
-          deck: data
-        });
-      }).catch( data => {
-        console.log(`Poopy: ${data}`)
-      });
+    const loadDeck = () => JSON.parse(JSON.stringify(deckData));
+    const {deck} = loadDeck();
+
+    this.setState({
+      deck: deck
+    });
   }
 
   makeCard = () => {
+    const daCard = this.state.deck[Math.floor(Math.random() * this.state.deck.length)];
+
     this.setState({
       numOfCards: this.state.numOfCards + 1,
-      cards: this.state.cards.concat(this.state.deck[Math.floor(Math.random() * this.state.deck.length)])
+      cards: this.state.cards.concat(daCard),
+      deck: this.state.deck.filter(card => card != daCard)
     });
   }
 
   render() {
 
     const theCards = this.state.cards.map( (card, i) => {
-      return <Card key={i} />
+      return <Card key={i} cardData={this.state.cards[i]} />
     });
 
     return (

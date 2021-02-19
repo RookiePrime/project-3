@@ -3,14 +3,16 @@ import './Card.css';
 
 class Card extends Component {
     render() {
+        const {cardData} = this.props;
+
         return (
             <div className="card">
             <div className="card-top">
-              <h3 className="card-name">card name</h3>
+              <h3 className="card-name">{cardData}</h3>
               
             </div>
             <div className="pic-box">
-              <img src="../cards-coin-master.png" />
+              <img src="../assets/card_executioner.jpg" />
             </div>
             <div className="card-bottom">
               <div className="card-text-box">
@@ -18,6 +20,9 @@ class Card extends Component {
               </div>
             </div>
           </div>
+              // <div className="card">
+              //   <img src={cardUrl} />
+              // </div>
         );
     }
 }
