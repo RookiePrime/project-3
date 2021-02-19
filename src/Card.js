@@ -7,18 +7,18 @@ class Card extends Component {
 
         return (
             <div className="card">
-            <div className="card-top">
+            {/* <div className="card-top">
               <h3 className="card-name">{cardData}</h3>
               
             </div>
-            <div className="pic-box">
-              <img src="../assets/card_executioner.jpg" />
-            </div>
+            <div className="pic-box"> */}
+              <img src="../card-artifact.png" />
+            {/* </div>
             <div className="card-bottom">
               <div className="card-text-box">
                 <p className="card-text">lorem ipsum</p>
               </div>
-            </div>
+            </div> */}
           </div>
               // <div className="card">
               //   <img src={cardUrl} />
