@@ -12,7 +12,7 @@ class Card extends Component {
               
             </div>
             <div className="pic-box"> */}
-              <img src="../card-artifact.png" />
+              <img src="../cards-coin-master.png" />
             {/* </div>
             <div className="card-bottom">
               <div className="card-text-box">
