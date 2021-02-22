@@ -1,19 +1,74 @@
 {
     "deck": [
-        "The Artifact",
-        "The Beast",
-        "The Broken One",
-        "The Darklord",
-        "The Donjon",
-        "The Executioner",
-        "The Ghost",
-        "The Horseman",
-        "The Innocent",
-        "The Marionette",
-        "The Mists",
-        "The Raven",
-        "The Seer",
-        "The Tempter"
+        {
+            "name": "The Artifact",
+            "imageUrl": "../card_artifact.png",
+            "key": 0
+        },
+        {
+            "name": "The Beast",
+            "imageUrl": "../card_beast.png",
+            "key": 1
+        },
+        {
+            "name": "The Broken One",
+            "imageUrl": "../card_broken_one.png",
+            "key": 2
+        },
+        {
+            "name": "The Darklord",
+            "imageUrl": "../card_darklord.png",
+            "key": 3
+        },
+        {
+            "name": "The Donjon",
+            "imageUrl": "../card_donjon.png",
+            "key": 4
+        },
+        {
+            "name": "The Executioner",
+            "imageUrl": "../card_executioner.jpg",
+            "key": 5
+        },
+        {
+            "name": "The Ghost",
+            "imageUrl": "../card_ghost.png",
+            "key": 6
+        },
+        {
+            "name": "The Horseman",
+            "imageUrl": "../card_horseman.png",
+            "key": 7
+        },
+        {
+            "name": "The Innocent",
+            "imageUrl": "../card_innocent.png",
+            "key": 8
+        },
+        {
+            "name": "The Marionette",
+            "imageUrl": "../card_marionette.png",
+            "key": 9
+        },
+        {
+            "name": "The Mists",
+            "imageUrl": "../card_mists.png",
+            "key": 10
+        },
+        {
+            "name": "The Raven",
+            "imageUrl": "../card_raven.png",
+            "key": 11
+        },
+        {
+            "name": "The Seer",
+            "imageUrl": "../card_seer.png",
+            "key": 12
+        },
+        {
+            "name": "The Tempter",
+            "imageUrl": "../card_tempter.png",
+            "key": 13
+        }
     ]
-
 }
