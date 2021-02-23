@@ -6,25 +6,14 @@ class Card extends Component {
         const {cardData} = this.props;
         const {imageUrl} = cardData;
 
-        if (cardData.flipped) {
-          return (
-            <div className="card flipped" carddata={cardData} style={
-              {
-                backgroundImage: `url(${imageUrl})`,
-              }
-            }>
-            </div>
-          );
-        } else {
-          return (
-            <div className="card" carddata={cardData} style={
-              {
-                backgroundImage: `url(${imageUrl})`
-              }
-            }>
-            </div>
-          );
-        }
+        return (
+          <div className="card" carddata={cardData} style={
+            {
+              backgroundImage: `url(./assets/card-artifact.png)`
+            }
+          }>
+          </div>
+         );
     }
 }
 
