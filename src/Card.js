@@ -8,7 +8,7 @@ class Card extends Component {
         return (
           <div className="card" carddata={cardData} style={
             {
-              backgroundImage: `url('./assets/card_artifact.png')`
+              backgroundImage: `url(../evileye.png)`
             }
           }>
           </div>
