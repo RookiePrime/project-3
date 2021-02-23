@@ -1,6 +1,7 @@
 .card {
   background-position: center;
   background-size: cover;
+  background-image: url('./assets/card_artifact.png');
   box-shadow: 0 0 30px whitesmoke;
   border-radius: 5%;
   height: 400px;
