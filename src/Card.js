@@ -8,7 +8,7 @@ class Card extends Component {
         return (
           <div className="card" carddata={cardData} style={
             {
-              backgroundImage: `url(../evileye.png)`
+              // backgroundImage: `url(${cardData.imageUrl})`
             }
           }>
           </div>
