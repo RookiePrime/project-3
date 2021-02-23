@@ -23,6 +23,8 @@ class App extends Component {
   makeCard = () => {
     const daCard = this.state.deck[Math.floor(Math.random() * this.state.deck.length)];
 
+    daCard.flipped = Math.random() < 0.5;
+
     this.setState({
       numOfCards: this.state.numOfCards + 1,
       cards: this.state.cards.concat(daCard),
